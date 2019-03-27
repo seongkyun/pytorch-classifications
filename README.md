@@ -42,6 +42,24 @@ __Data parameter arguments__
 __Other argument__
 - `--idx`: the index for the repeated experiment (default: 0)
 
+## Experimental results
+- Every hyper parameters are same with default settings
+- Cifar-10 dataset
+  - VGG11: 91.94 %
+  - VGG16: 92.98 %
+  - VGG19: 93.24 %
+  - ResNet50: 94.06 %
+- Cifar-100 dataset
+  - VGG11: 70.53 %
+  - VGG16: 74.03 %
+  - VGG19: 72.66 %
+  - ResNet50: 79.57 %
+- STL-10 dataset
+  - VGG11: 79.62 %
+  - VGG16: 80.20 %
+  - VGG19: 70.17 %
+  - ResNet34: 87.23 %
+
 ## To do
 - Imagenet training will be added.
 - Wide-ResNet and DenseNet can be easily implementable with including code
