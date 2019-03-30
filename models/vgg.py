@@ -16,11 +16,9 @@ class VGG(nn.Module):
     def __init__(self, vgg_name, input_size=32, num_class=100):
         super(VGG, self).__init__()
         self.input_size = input_size
-        #self.input_size = 96
         self.features = self._make_layers(cfg[vgg_name])
         self.n_maps = cfg[vgg_name][-2]
         self.fc = self._make_fc_layers()
-        #self.classifier = nn.Linear(self.n_maps, 10)
         self.classifier1 = nn.Linear(self.n_maps, 128)
         self.classifier2 = nn.Linear(128, num_class)
 
@@ -28,7 +26,6 @@ class VGG(nn.Module):
         out = self.features(x)
         out = out.view(out.size(0), -1)
         out = self.fc(out)
-        #out = self.classifier(out)
         out = self.classifier1(out)
         out = self.classifier2(out)
         return out

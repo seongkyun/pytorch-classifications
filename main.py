@@ -204,7 +204,6 @@ if __name__ == '__main__':
     if not os.path.exists('trained_nets/' + save_folder):
         os.makedirs('trained_nets/' + save_folder)
 
-    #f = open('trained_nets/' + save_folder + '/log.out', 'a', 0)
     f = open('trained_nets/' + save_folder + '/log.out', 'a')
 
     trainloader, testloader = dataloader.get_data_loaders(args)
@@ -224,7 +223,6 @@ if __name__ == '__main__':
     else:
         net = model_loader.load(args.model)
         print(net)
-        #sys.exit()
         init_params(net)
 
     if args.ngpu > 1:
@@ -279,12 +277,10 @@ if __name__ == '__main__':
 
         # Save checkpoint.
         acc = 100 - test_err
-        #if epoch == 1:
-        #    max_acc = acc
 
-        if epoch == 1 or epoch % args.save_epoch == 0 or epoch == 150 or acc>best_acc:
-            if acc>best_acc:
-                best_acc = acc
+        if epoch == 1 or epoch % args.save_epoch == 0 or epoch == 150 or (acc > best_acc and epoch > (args.epochs - 40)):
+            best_acc = acc
+
             state = {
                 'acc': acc,
                 'epoch': epoch,

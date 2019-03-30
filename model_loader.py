@@ -72,28 +72,14 @@ def get_args(args):
 def load(model_name, model_file=None, data_parallel=False):
     global num_class
     global d_name
-    #print(stl_flag)
-    #sys.exit()
-    #print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
-    #print(num_class)
-    #sys.exit(1)
+
     if d_name == 's':
         net = models[model_name](input_size=96, num_class=num_class)
     elif d_name == 'i':
         print('imagenet is not supported yet.')
     else:
-        #print('other model')
         net = models[model_name](input_size=32, num_class=num_class)
-    #=========================
-    #print(glb_args.dataset)
-    #sys.exit()
-    #print(net.input_size)
-    
-    #test = models['vgg19']()
-    #test = vgg.VGG19(10)
-    #print(net)
-    #sys.exit()
-    #=========================
+
     if data_parallel: # the model is saved in data paralle mode
         net = torch.nn.DataParallel(net)
 
@@ -102,7 +88,6 @@ def load(model_name, model_file=None, data_parallel=False):
         stored = torch.load(model_file, map_location=lambda storage, loc: storage)
         if 'state_dict' in stored.keys():
             net.load_state_dict(stored['state_dict'])
-
         else:
             net.load_state_dict(stored)
 
