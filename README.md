@@ -69,9 +69,9 @@ __Other argument__
 
 ## Available datasets
 - CIFAR-10: `--dataset cifar10`
-- CIFAR-100: `--dataset cifar100
-- STL-10: `--dataset stl10
-- IMAGENET(ILSVRC12)- Not yet supported (will be added)
+- CIFAR-100: `--dataset cifar100`
+- STL-10: `--dataset stl10`
+- IMAGENET(ILSVRC12): Not yet supported (will be added)
 
 ## Experimental results
 - Every hyper parameters are same with default settings
