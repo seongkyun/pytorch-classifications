@@ -47,6 +47,26 @@ __Other argument__
   - The fully-connected layers are added for my experiment(to output 128-dimension vectors).
   - If you want to ues original models, then just remove one fully-connected layer among 2 of each architecthre.
 
+- VGGs
+  - VGG19: `--model vgg9`
+  - VGG11: `--model vgg11`
+  - VGG16: `--model vgg16`
+  - VGG19: `--model vgg19`
+- ResNets
+  - ResNet18: `--model resnet18`
+  - ResNet34: `--model resnet34`
+  - ResNet50: `--model resnet50`
+  - ResNet101: `--model resnet101`
+  - ResNet152: `--model resnet152`
+- MobileNets
+  - MobileNet V1: `--model mobilenetv1`
+  - MobileNet V2: Not yet supported (will be added)
+- DenseNets
+  - DenseNet121: Not yet supported (will be added)
+  - DenseNet169: Not yet supported (will be added)
+  - DenseNet201: Not yet supported (will be added)
+  - DenseNet161: Not yet supported (will be added)
+
 ## Available datasets
 - CIFAR-10
 - CIFAR-100
