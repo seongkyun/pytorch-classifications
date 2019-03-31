@@ -279,7 +279,8 @@ if __name__ == '__main__':
         acc = 100 - test_err
 
         if epoch == 1 or epoch % args.save_epoch == 0 or epoch == 150 or (acc > best_acc and epoch > (args.epochs - 40)):
-            best_acc = acc
+            if (acc > best_acc and epoch > (args.epochs - 40)):
+                best_acc = acc
 
             state = {
                 'acc': acc,
