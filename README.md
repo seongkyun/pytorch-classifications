@@ -42,6 +42,17 @@ __Data parameter arguments__
 __Other argument__
 - `--idx`: the index for the repeated experiment (default: 0)
 
+## Available networks
+- __!IMPORTANT!__ : All the architecture of networks are modified
+  - The fully-connected layers are added for my experiment(to output 128-dimension vectors).
+  - If you want to ues original models, then just remove one fully-connected layer among 2 of each architecthre.
+
+## Available datasets
+- CIFAR-10
+- CIFAR-100
+- STL-10
+- IMAGENET(ILSVRC12)- Not yet supported (will be added)
+
 ## Experimental results
 - Every hyper parameters are same with default settings
 - Cifar-10 dataset

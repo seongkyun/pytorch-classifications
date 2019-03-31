@@ -3,14 +3,10 @@ import torch, torchvision
 import models.vgg as vgg
 import models.resnet as resnet
 import models.densenet as densenet
-#import models_stl.vgg as vgg_stl
-#import models_stl.resnet as resnet_stl
-#import models_stl.densenet as densenet_stl
+import models.mobilenetv1 as mobilenetv1
 
 # map between model name and function
-#print(args.dataset)
 import sys
-#sys.exit()
 global num_class
 global d_name
 models = {
@@ -18,34 +14,13 @@ models = {
     'vgg11'                 : vgg.VGG11,
     'vgg16'                 : vgg.VGG16,
     'vgg19'                 : vgg.VGG19,
-    #'densenet121'           : densenet.DenseNet121,
     'resnet18'              : resnet.ResNet18,
-    #'resnet18_noshort'      : resnet.ResNet18_noshort,
     'resnet34'              : resnet.ResNet34,
-    #'resnet34_noshort'      : resnet.ResNet34_noshort,
     'resnet50'              : resnet.ResNet50,
-    #'resnet50_noshort'      : resnet.ResNet50_noshort,
     'resnet101'             : resnet.ResNet101,
-    #'resnet101_noshort'     : resnet.ResNet101_noshort,
     'resnet152'             : resnet.ResNet152,
-    #'resnet152_noshort'     : resnet.ResNet152_noshort,
-    #'resnet20'              : resnet.ResNet20,
-    #'resnet20_noshort'      : resnet.ResNet20_noshort,
-    #'resnet32_noshort'      : resnet.ResNet32_noshort,
-    #'resnet44_noshort'      : resnet.ResNet44_noshort,
-    #'resnet50_16_noshort'   : resnet.ResNet50_16_noshort,
-    #'resnet56'              : resnet.ResNet56,
-    #'resnet56_noshort'      : resnet.ResNet56_noshort,
-    #'resnet110'             : resnet.ResNet110,
-    #'resnet110_noshort'     : resnet.ResNet110_noshort,
-    #'wrn56_2'               : resnet.WRN56_2,
-    #'wrn56_2_noshort'       : resnet.WRN56_2_noshort,
-    #'wrn56_4'               : resnet.WRN56_4,
-    #'wrn56_4_noshort'       : resnet.WRN56_4_noshort,
-    #'wrn56_8'               : resnet.WRN56_8,
-    #'wrn56_8_noshort'       : resnet.WRN56_8_noshort,
-    #'wrn110_2_noshort'      : resnet.WRN110_2_noshort,
-    #'wrn110_4_noshort'      : resnet.WRN110_4_noshort,
+    'mobilenetv1'           : mobilenetv1.MobileNet
+    
 }
 
 def get_args(args):
