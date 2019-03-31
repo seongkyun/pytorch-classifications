@@ -95,5 +95,6 @@ __Other argument__
 - Imagenet training will be added.
 - Wide-ResNet and DenseNet can be easily implementable with including code
   - Little code changes are needed to do that (annotation code)
+- Tensorboard loss plotting
   
 - This code is came from https://github.com/tomgoldstein/loss-landscape and modified.
