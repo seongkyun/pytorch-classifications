@@ -68,9 +68,9 @@ __Other argument__
   - DenseNet161: Not yet supported (will be added)
 
 ## Available datasets
-- CIFAR-10
-- CIFAR-100
-- STL-10
+- CIFAR-10: `--dataset cifar10`
+- CIFAR-100: `--dataset cifar100
+- STL-10: `--dataset stl10
 - IMAGENET(ILSVRC12)- Not yet supported (will be added)
 
 ## Experimental results
