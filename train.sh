@@ -1,13 +1,11 @@
 #!/bin/bash
 
-echo 'Training MobileNet V1 with CIFAR-100'
+echo 'Training VGGs/noaug with CIFAR-100'
 {
-python main.py --dataset cifar100 --model mobilenetv1
-echo 'Training Finished'
+python main.py --dataset cifar100 --model vgg11 --noaug
+}
+{
+python main.py --dataset cifar100 --model vgg16 --noaug
+echo 'Trainig is finished'
 }
 
-echo 'Training MobileNet V1 with STL-10'
-{
-python main.py --dataset stl10 --model mobilenetv1
-echo 'Training Finished'
-}
