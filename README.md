@@ -46,7 +46,8 @@ __Other argument__
 - __!IMPORTANT!__ : All the architecture of networks are modified
   - The fully-connected layers are added for my experiment(to output 128-dimension vectors).
   - If you want to ues original models, then just remove one fully-connected layer among 2 of each architecthre.
-
+- AlexNet
+  `--model alexnet`
 - VGGs
   - VGG19: `--model vgg9`
   - VGG11: `--model vgg11`
