@@ -1,5 +1,6 @@
 import os
 import torch, torchvision
+import models.alexnet as alexnet
 import models.vgg as vgg
 import models.resnet as resnet
 import models.densenet as densenet
@@ -10,6 +11,7 @@ import sys
 global num_class
 global d_name
 models = {
+    'alexnet'               : alexnet.AlexNet,
     'vgg9'                  : vgg.VGG9,
     'vgg11'                 : vgg.VGG11,
     'vgg16'                 : vgg.VGG16,
@@ -69,5 +71,5 @@ def load(model_name, model_file=None, data_parallel=False):
     if data_parallel: # convert the model back to the single GPU version
         net = net.module
 
-    net.eval()
+    #net.eval()
     return net
